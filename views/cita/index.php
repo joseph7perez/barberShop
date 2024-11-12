@@ -24,7 +24,9 @@
             </div>
             <div class="campo">
                 <label for="fecha">Fecha</label>
-                <input type="date" id="fecha">
+                <input type="date" id="fecha" min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>"> 
+                <!--metodo min para que no se puedan seleccionar antes de la fecha de hoy-->
+                <!--metodo strtotime('+1 day') para añadir un dia-->
             </div>
             <div class="campo">
                 <label for="hora">Hora</label>
