@@ -26,3 +26,18 @@
     }
 
 }
+
+.barra{
+ //   align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .boton{
+        @include m.boton(v.$negro, v.$blanco);
+        margin: 0;
+    }
+}

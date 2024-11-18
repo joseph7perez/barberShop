@@ -1,3 +1,8 @@
+<div class="barra">
+    <p>Hola: <?php echo $nombre ?? ''; ?></p>
+    <a class="boton" href="/logout">Cerrar Sesión</a>
+</div>
+
 <h1 class="nombre-pagina">Crear una Cita</h1>
 <p class="descripcion-pagina">Elige un servicio: </p>
 
@@ -32,9 +37,10 @@
                 <label for="hora">Hora</label>
                 <input type="time" id="hora">
             </div>
+            <input type="hidden" id="id" value="<?php echo $id; ?>">
         </form>
     </div>
-    <div id="paso-3" class="seccion">
+    <div id="paso-3" class="seccion contenido-resumen">
         <h2>Resumen Cita</h2>
         <p class="text-center" >Verifica que todo este correcto</p>
     </div>
@@ -47,6 +53,10 @@
 </div>
 
 <?php 
-    $script = " <script src='build/js/app.js'></script> ";
+
+    $script = "
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script> 
+    <script src='build/js/app.js'></script> 
+    ";
 
 ?>
